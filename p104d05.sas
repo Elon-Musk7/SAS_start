@@ -37,4 +37,6 @@ data storm_new;
 	*Add IF-THEN statements;
 	if MinPressure <= 920 then PressureGroup=1;
 	if MinPressure > 920 then PressureGroup = 0;
+	* if you put the following if then statement as the first if-then, then it will be overwritten by later if-then.;
+	if MinPressure =. then PressureGroup =.;
 run;
